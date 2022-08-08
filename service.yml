@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodeapplication-service
+spec:
+  selector:
+    app: nodeapplication #same given in deployment
+  type: NodePort #we can use LoadBalancer also
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 3000 #same as of container port to expose
+      nodePort: 30011 #kubernetes assign from 30000 - some extend
+  

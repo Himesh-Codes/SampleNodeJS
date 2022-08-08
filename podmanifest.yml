@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels: #we can give any key value pairs
+    env: dev
+    app: nginx
+spec: 
+  containers:
+    - name: nginxweb
+      image: nginx:latest
+      ports: 
+        - name: nginxwebport
+          containerPort: 8080
+          protocol: TCP

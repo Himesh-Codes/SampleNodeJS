@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapplication-deployment #the name of service file should be a synonym
+  labels: 
+    app: nodeapplication
+spec:
+  replicas: 1
+  selector:
+    matchLabels: 
+      app: nodeapplication
+  template:
+    metadata:
+      labels:
+        app: nodeapplication
+    spec:
+      containers:
+        - name: nodeserver #select a container
+          image: himesh27/samplenode:latest
+          ports:
+            - containerPort: 3000
