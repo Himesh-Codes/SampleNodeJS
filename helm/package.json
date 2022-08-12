@@ -1,0 +1,14 @@
+{
+  "name": "helm",
+  "version": "1.0.0",
+  "description": "- Helm is a package manager for kubernetes - Streamlines installations and management of kubernetes apps. - Helm charts are the packages format. - Helm proposed concept is the package all config files into the single chart.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
