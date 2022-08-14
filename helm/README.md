@@ -1,4 +1,6 @@
-# Helm
+# Helm Deploy
+- 
+# Helm 
 - Helm is a package manager for kubernetes
 - Streamlines installations and management of kubernetes apps.
 - Helm charts are the packages format.
@@ -30,8 +32,26 @@
 
 # Helm commands
 - Helm install : Install helm charts
-- Helm search : Search for chart in repository.
+- Helm search : Search for chart in repository. (artifacthub.io) / use command : helm search hub wordpress / helm search repo wordpress
 - Helm list : List all the deployed releases.
 - Helm upgrade : Upgrade with new releases.
 - Helm  delete: Delete the release and all deployed resources.
 - Helm create: Create a helm chart.
+
+# Helm installations
+- Binary installations : The file can be copied to ready to use.
+- MacOS - brew install helm
+- Create helm chart : helm create my-node-chart
+- Configure with our docker image created.
+- Inside the created chart folder open terminal.
+- Install chart: helm repo add bitnami https://charts.bitnami.com/bitnami, helm install my-node-1 bitnami/node
+    Since the release name is needed to be added by us, my-node-1 is the release name.
+- Delete release: helm delete my-node-1
+- Get helm history : helm history my-node-1
+
+# Helm chart config
+- Chart.yml : Configure the chart info
+- values.yml: contains all values
+- deployment.yml, service.yml - Deployment, service manifest those get values from the values.yml
+- Lint the helm changes: helm lint my-node-chart/ 
+    Here name of helm chart is needed as input last.
